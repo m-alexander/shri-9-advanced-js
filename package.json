@@ -1,0 +1,18 @@
+{
+  "name": "9-advanced-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "solution/index.js",
+  "scripts": {
+    "test": "jest",
+    "prettify": "prettier **/*.js --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1"
+  }
+}
