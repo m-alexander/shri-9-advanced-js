@@ -77,10 +77,9 @@ describe('MySet', () => {
     expect(Object.prototype.toString.call(set)).toEqual('[object ^_^]');
   });
 
-  it('есть forEach, который делает какие-то странные вещи...', (done) => {
+  it('есть forEach, который делает какие-то странные вещи...', () => {
     set.forEach(function (item) {
       expect(item.getValue.call(this)).toEqual(42);
-      done();
     }, data);
   });
 });

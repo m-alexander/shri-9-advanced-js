@@ -2,6 +2,7 @@ module.exports = class MySet {
   constructor(initial = []) {
     this.data = [];
     initial.forEach((item) => this.add(item));
+    this.forEach = this.data.forEach;
   }
 
   add(value) {
@@ -69,7 +70,7 @@ module.exports = class MySet {
     return '^_^';
   }
 
-  forEach(cb, ctx) {
-    this.data.forEach((item) => cb.call(ctx, item));
+  valueOf() {
+    return this;
   }
 };
