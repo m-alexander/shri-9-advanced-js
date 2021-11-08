@@ -1,7 +1,13 @@
 module.exports = class MySet {
-  constructor(initial = []) {
+  constructor(initial) {
     this.data = [];
-    initial.forEach((item) => this.add(item));
+
+    if (initial?.[Symbol.iterator]) {
+      for (const item of initial) {
+        this.add(item);
+      }
+    }
+
     this.forEach = this.data.forEach;
   }
 
